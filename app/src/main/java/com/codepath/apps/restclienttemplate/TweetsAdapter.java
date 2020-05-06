@@ -72,6 +72,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         TextView tvUserAt;
 
+
         public ViewHolder(@NonNull View itemView) { //represents one row in recycler view
             super(itemView);
             ivProfileImage= itemView.findViewById(R.id.ivProfileImage);
@@ -85,6 +86,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.name);
             tvUserAt.setText(tweet.user.screenName);
+
             Glide.with(context).load(tweet.user.profileImageUrl).transform(new CircleCrop()).into(ivProfileImage);
         }
     }
